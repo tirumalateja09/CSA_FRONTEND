@@ -24,7 +24,7 @@ const API="https://csa-backend-authentication.onrender.com"
         
       } catch (error) {
         console.error("Error during signup:", error);
-        toast.error(error|| error?.message);
+        toast.error(error?.response?.data?.message|| "Error in Account creation");
         return null;
        
        
@@ -44,7 +44,7 @@ const API="https://csa-backend-authentication.onrender.com"
 
         }catch(err){
             console.log(err)
-            toast(err?.message)
+            toast(err?.response?.data?.message)
         }
 
     }
